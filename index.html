@@ -45,7 +45,20 @@
             <h4>Mars Facts</h4>
             {{ mars.facts | safe }}
           </div>
+          <!--Hemisphere Images -->
+          {% for hemi in mars.hemispheres %}
+          <div class="col-md-3">
+            <div class = "thumbnail">
+              <img src = "{{hemi.url}}">
+              <div class = "caption">
+                <h3>
+                  {{hemi.title}}
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
+        {%endfor%}
       </div>
     </div>
   </body>
